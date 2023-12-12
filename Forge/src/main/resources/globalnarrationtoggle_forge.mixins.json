@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.natamus.globalnarrationtoggle.forge.mixin",
+  "plugin": "com.natamus.collective.forge.mixin.plugin.ForgeMixinConfigPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "globalnarrationtoggle_forge.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+	"MinecraftMixin",
+	"OptionsMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+	"defaultRequire": 1
+  }
+}
