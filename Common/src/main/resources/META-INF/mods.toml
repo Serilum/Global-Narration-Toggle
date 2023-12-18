@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="*"
 license="All rights reserved"
-issueTrackerURL="https://github.com/ricksouth/serilum-mc-mods/labels/Mod:%20Global%20Narration%20Toggle"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Global%20Narration%20Toggle"
 logoFile="icon.png"
 
 [[mods]]
 modId="globalnarrationtoggle"
-version="1.0"
+version="1.1"
 displayName="Global Narration Toggle"
-displayURL="https://curseforge.com/minecraft/mc-mods/global-narration-toggle"
+displayURL="https://serilum.com/mod/global-narration-toggle"
 authors="Rick South"
 description='''Makes the narrator setting global, across instances. To turn it on and off. Creates a better start-up experience for all.
 '''
@@ -21,13 +21,15 @@ If you would like to contribute too, check out https://ricksouth.com/donate. App
 
 [[dependencies.globalnarrationtoggle]]
     modId="collective"
+    type="required"
     mandatory=true
-    versionRange="[7.15,)"
+    versionRange="[7.21,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.globalnarrationtoggle]]
     modId="minecraft"
+    type="required"
     mandatory=true
     versionRange="[1.20.4]"
     ordering="NONE"
