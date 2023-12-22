@@ -1,4 +1,4 @@
-package com.natamus.globalnarrationtoggle.forge.mixin;
+package com.natamus.globalnarrationtoggle.mixin;
 
 import com.natamus.globalnarrationtoggle.util.Util;
 import net.minecraft.client.Minecraft;
