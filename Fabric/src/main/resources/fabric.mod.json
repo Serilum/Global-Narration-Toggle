@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "globalnarrationtoggle",
-  "version": "1.2",
+  "version": "1.3",
 
   "name": "Global Narration Toggle",
   "description": "Makes the narrator setting global, across instances. To turn it on and off. Creates a better start-up experience for all.",
@@ -26,7 +26,7 @@
     "fabric": "*",
     "minecraft": ">=1.20",
     "java": ">=17",
-    "collective": ">=7.26"
+    "collective": ">=7.49"
   },
 
   "custom": {
@@ -41,21 +41,19 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://ricksouth.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
 	  " ",
 	  "Membership sponsors:",
-	  " Adam E",
 	  " Alister",
+	  " Andrean Olgo",
 	  " aternosorg",
+	  " BirdieMiner",
 	  " Cherriesaurus",
-	  " FireStriker",
-	  " Greg Johnson",
-	  " Kreezxil",
+	  " Jack",
+	  " Jeremy Langford",
 	  " Michael W. S.",
-	  " Mir3JonCZ",
-	  " Rebecca Hb.",
+	  " pepe1191",
 	  " Shana Gitnick",
-	  " silver Bowsman",
 	  " Tyler Behl"
   ]
 }
