@@ -11,15 +11,36 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Util {
-	private static final String appDataPath = System.getenv("APPDATA");
-	private static final File dir = new File(appDataPath);
-	private static final String globalOptionsPath = appDataPath + File.separator + ".minecraft" + File.separator + "options.txt";
-	private static final File globalOptionsFile = new File(globalOptionsPath);
+	private static final String OS = (System.getProperty("os.name")).toUpperCase();
+
+	private static String getAppDataPath() {
+		if (OS.contains("WIN")) {
+			return System.getenv("AppData");
+		}
+
+		String appDataPath = System.getProperty("user.home");
+		if (OS.contains("MAC")) {
+			appDataPath += File.separator + "Library" + File.separator + "Application Support";
+		}
+
+		return appDataPath;
+	}
+	private static final File dir = new File(getAppDataPath());
+
+	private static String getGlobalOptionsPath() {
+		String dot = ".";
+		if (OS.contains("MAC")) {
+			dot = "";
+		}
+
+		return getAppDataPath() + File.separator + dot + "minecraft" + File.separator + "options.txt";
+	}
+	private static final File globalOptionsFile = new File(getGlobalOptionsPath());
 
 	public static boolean isGloballyToggledOff() {
 		try {
 			if (dir.isDirectory() && globalOptionsFile.isFile()) {
-				String optionsFileContent = new String(Files.readAllBytes(Paths.get(globalOptionsPath)));
+				String optionsFileContent = new String(Files.readAllBytes(Paths.get(getGlobalOptionsPath())));
 				for (String line : optionsFileContent.split("\n")) {
 					if (line.startsWith("narrator:")) {
 						String narratorSetting = line.split(":")[1].strip();
@@ -49,7 +70,7 @@ public class Util {
 
 		StringBuilder optionsFileContent = new StringBuilder();
 		if (globalOptionsFile.isFile()) {
-			String currentOptionsFileContent = new String(Files.readAllBytes(Paths.get(globalOptionsPath)));
+			String currentOptionsFileContent = new String(Files.readAllBytes(Paths.get(getGlobalOptionsPath())));
 			for (String line : currentOptionsFileContent.split("\n")) {
 				if (line.startsWith("narrator:")) {
 					optionsFileContent.append("narrator:").append(newNarratorId).append("\n");
@@ -62,7 +83,7 @@ public class Util {
 			optionsFileContent.append("narrator:").append(newNarratorId);
 		}
 
-		FileWriter writer = new FileWriter(globalOptionsPath, StandardCharsets.UTF_8, false);
+		FileWriter writer = new FileWriter(getGlobalOptionsPath(), StandardCharsets.UTF_8, false);
 		writer.write(optionsFileContent.toString());
 		writer.close();
 
