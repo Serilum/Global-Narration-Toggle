@@ -1,7 +1,7 @@
-package com.natamus.globalnarrationtoggle.util;
+package com.serilum.globalnarrationtoggle.util;
 
 import com.natamus.collective.functions.NumberFunctions;
-import com.natamus.globalnarrationtoggle.data.Variables;
+import com.serilum.globalnarrationtoggle.data.Variables;
 
 import java.io.File;
 import java.io.FileWriter;
