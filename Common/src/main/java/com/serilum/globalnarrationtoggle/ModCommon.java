@@ -1,4 +1,4 @@
-package com.natamus.globalnarrationtoggle;
+package com.serilum.globalnarrationtoggle;
 
 public class ModCommon {
 

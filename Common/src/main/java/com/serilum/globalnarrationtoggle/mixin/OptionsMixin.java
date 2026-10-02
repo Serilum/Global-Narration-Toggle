@@ -1,6 +1,6 @@
-package com.natamus.globalnarrationtoggle.mixin;
+package com.serilum.globalnarrationtoggle.mixin;
 
-import com.natamus.globalnarrationtoggle.util.Util;
+import com.serilum.globalnarrationtoggle.util.Util;
 import net.minecraft.client.NarratorStatus;
 import net.minecraft.client.OptionInstance;
 import net.minecraft.client.Options;
