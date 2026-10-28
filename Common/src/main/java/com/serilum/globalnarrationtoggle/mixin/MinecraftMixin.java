@@ -1,6 +1,6 @@
-package com.natamus.globalnarrationtoggle.mixin;
+package com.serilum.globalnarrationtoggle.mixin;
 
-import com.natamus.globalnarrationtoggle.util.Util;
+import com.serilum.globalnarrationtoggle.util.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.main.GameConfig;
 import org.spongepowered.asm.mixin.Mixin;

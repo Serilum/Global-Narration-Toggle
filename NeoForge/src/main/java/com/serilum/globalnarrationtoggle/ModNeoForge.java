@@ -1,8 +1,8 @@
-package com.natamus.globalnarrationtoggle;
+package com.serilum.globalnarrationtoggle;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.globalnarrationtoggle.util.Reference;
+import com.serilum.globalnarrationtoggle.util.Reference;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
